@@ -27,14 +27,13 @@ for first_level_category_and_subcategory in first_level_categories_and_subcatego
     first_second_level_categories_and_subcategories[first_level_category] = subcategories_text
 
     second_level_categories = BeautifulSoup(response_cur.text, 'html.parser').find_all('a', 'sbc-link')
-    print(second_level_categories)
     for second_level_category in second_level_categories:
-        print(second_level_category)
-        second_level_category_link = 'https://www.vons.com' + second_level_category['href']
-        second_level_category_response = requests.get(second_level_category_link, proxies=proxies_dict)
-        second_level_subcategories = BeautifulSoup(second_level_category_response.text, 'html.parser')
-        third_level_categories = second_level_subcategories.find_all('span', "squaredThree department-filter-aisle")
-        subcategories_text = []
-        for third_level_category in third_level_categories:
-            subcategories_text.append(third_level_category.a.text[0:-4])
-        second_third_level_categories_and_subcategories[second_level_category['data-aisle-name']] = subcategories_text
+        if 'href' in second_level_category.attrs:
+            second_level_category_link = 'https://www.vons.com' + second_level_category['href']
+            second_level_category_response = requests.get(second_level_category_link, proxies=proxies_dict)
+            second_level_subcategories = BeautifulSoup(second_level_category_response.text, 'html.parser')
+            third_level_categories = second_level_subcategories.find_all('span', "squaredThree department-filter-aisle")
+            subcategories_text = []
+            for third_level_category in third_level_categories:
+                subcategories_text.append(third_level_category.a.text[0:-4])
+            second_third_level_categories_and_subcategories[second_level_category['data-aisle-name']] = subcategories_text
