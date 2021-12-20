@@ -21,7 +21,7 @@ for key in categories_mapping:
     query = "INSERT INTO Categories VALUES ({}, '{}');\n".format(categories_mapping[key], key)
     dql_file.writelines(query)
 
-dql_file.writelines("\n\nINSERT INTO Sites VALUES (0, 'vons.com', 'vons.com', 'vons.com', 'vons.com');\n\n")
+dql_file.writelines("INSERT INTO Sites VALUES (0, 'vons.com', 'vons.com', 'vons.com', 'vons.com');\n")
 
 vons_id = 0
 for key in first_second_level_categories_and_subcategories:
