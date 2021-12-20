@@ -37,7 +37,7 @@ CREATE TABLE Products (
     specification text NOT NULL,  
     nutrional text NOT NULL,  
     description text NOT NULL,  
-    price int NOT NULL,  
+    price int CHECK (PRICE > 0),  
     category_id int REFERENCES Categories(Id),  
     app_category_id int REFERENCES Supplier_categories(supplier_category_id) ON DELETE CASCADE ON UPDATE RESTRICT,  
     catalog_product_id int REFERENCES Catalog_products(Id) ON DELETE CASCADE ON UPDATE RESTRICT,  
@@ -63,3 +63,4 @@ CREATE TABLE Product_category (
     category_id int REFERENCES Categories(Id) ON DELETE CASCADE ON UPDATE RESTRICT,  
     primary key (product_id, category_id)  
 );    
+
