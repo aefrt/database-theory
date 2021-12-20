@@ -858,10 +858,7 @@ INSERT INTO Categories VALUES (917, 'Spiked Seltzers');
 INSERT INTO Categories VALUES (918, 'Flavored Malt Beverages');
 INSERT INTO Categories VALUES (919, 'Cider');
 INSERT INTO Categories VALUES (920, 'Non-Alcoholic Beer');
-
-
 INSERT INTO Sites VALUES (0, 'vons.com', 'vons.com', 'vons.com', 'vons.com');
-
 INSERT INTO Supplier_categories VALUES (19, 0, 19, 0);
 INSERT INTO Supplier_categories VALUES (20, 0, 20, 0);
 INSERT INTO Supplier_categories VALUES (21, 0, 21, 0);
