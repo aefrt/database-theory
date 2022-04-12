@@ -11,5 +11,7 @@
 ### Текущее состояние:
 
 [Презентация](https://github.com/aefrt/database-theory/blob/aefrt-patch-2/Преза.pdf)
+
 [Отчет](https://github.com/aefrt/database-theory/blob/aefrt-patch-2/Отчет.docx)
+
 [Код](https://github.com/aefrt/database-theory/blob/aefrt-patch-2/code.py)
