@@ -17,7 +17,3 @@
 [Сайт aldi.us — вся работа](https://github.com/aefrt/database-theory/blob/aefrt-patch-2/kr3course.ipynb)
 
 [Презентация проекта](https://github.com/aefrt/database-theory/blob/aefrt-patch-2/КР%20преза%202.pdf)
-
-[Презентация базы данных](https://github.com/aefrt/database-theory/blob/aefrt-patch-2/Преза.pdf)
-
-[Данные о категориях с vons.com](https://github.com/aefrt/database-theory/blob/aefrt-patch-2/categories.csv)
